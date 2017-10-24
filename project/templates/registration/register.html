@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}User Registration for DAT605 Team E's Message Board{% endblock %}
+{% block head %}User Registration for DAT605 Team E's Message Board{% endblock %}
+{% block content %}
+    <form method="post" action=".">{% csrf_token %}
+        <table border="0">
+            {{ form.as_table }}
+        </table>
+        <p>
+            <input type="submit" value="Submit" />
+            <a href="/">
+                <span><input type="button" value = "Login"></span>
+            </a>
+        </p>
+    </form>
+{% endblock %}
